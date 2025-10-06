@@ -93,7 +93,7 @@ gen log_income = ln(income)
 */
 
 * egen: extended version of gen. Make constant by using functions such as mean(), sum()
-use C:\Users\jieun\Desktop\STATAforEcon\ch4\college.dta, clear
+use C:\Users\aneshthangaraj\Desktop\STATAforEcon\ch4\college.dta, clear
 egen mean_year = mean(year)
 bysort year: egen mean_year = mean(year)
 
@@ -209,3 +209,4 @@ list in 1/4
 label values hbp yesnomaybe
 list in 1/4
 /*Exercise Complete*/
+
