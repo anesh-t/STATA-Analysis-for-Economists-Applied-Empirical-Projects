@@ -1,10 +1,10 @@
 **************************
 * Part 1
 **************************
-use "C:\Users\jieun\Desktop\PublicStata\cepr_march_1980.dta", clear
-append using "C:\Users\jieun\Desktop\PublicStata\cepr_march_1990.dta", force
-append using "C:\Users\jieun\Desktop\PublicStata\cepr_march_2000.dta", force
-append using "C:\Users\jieun\Desktop\PublicStata\cepr_march_2016.dta", force
+use "C:\Users\aneshthangaraj\Desktop\PublicStata\cepr_march_1980.dta", clear
+append using "C:\Users\aneshthangaraj\Desktop\PublicStata\cepr_march_1990.dta", force
+append using "C:\Users\aneshthangaraj\Desktop\PublicStata\cepr_march_2000.dta", force
+append using "C:\Users\aneshthangaraj\Desktop\PublicStata\cepr_march_2016.dta", force
 
 * Restrict the sample to include only individuals of age 25-54
 keep if age>=25 & age<=54
@@ -51,3 +51,4 @@ drop if female == 0
 
 * Run the regressions
 bysort year: regress lhrs lrhrwage srlhrwage [aw=wgt]
+
