@@ -50,23 +50,4 @@ This repository serves as a learning and reference tool for anyone interested in
    - Elasticity estimation
    - Lorenz curves and inequality measures (Gini coefficient)
 
----
 
-## 📊 Example Command Snippets
-
-```stata
-* Basic summary statistics
-summarize wage age education
-
-* OLS regression
-reg wage education experience age
-
-* Instrumental variable model
-ivregress 2sls wage (education = distance_to_college)
-
-* Time-series setup and regression
-tsset year
-reg gdp growth_rate, lags(1)
-
-* Logit model
-logit employed education gender age
