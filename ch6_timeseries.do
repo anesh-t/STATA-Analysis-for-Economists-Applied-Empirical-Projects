@@ -17,7 +17,7 @@
 *For low unemployment rate, the economy has to cost high price level and for low price level, vice versa.
 
 *inf_t=Beta_0+Beta_1*unem_t+u_t
-use "C:\Users\jieun\Desktop\STATAforEcon\ch6\phillips", clear
+use "C:\Users\aneshthangaraj\Desktop\STATAforEcon\ch6\phillips", clear
 tsset year
 
 *check variables
@@ -56,7 +56,7 @@ Ex) log(M_t)=alpha_0+delta_0*log(GDP_t)+delta_1*log(GDP_t-1)
 *********************
 *model: gfr_t=Beta_0+Beta_1*pe_t+Beta_2*pe_t-1+Beta_3*pe_t-2+Beta_4*ww2_t+Beta_5*pill_t+u_t
 
-use "C:\Users\jieun\Desktop\STATAforEcon\ch6\fertil3", clear
+use "C:\Users\aneshthangaraj\Desktop\STATAforEcon\ch6\fertil3", clear
 *check data characteristics
 sum
 
@@ -117,7 +117,7 @@ outreg2 using fertility, word append
 * 2-2.Example: Effect of anti-dumping sue on import
 *********************
 
-use "C:\Users\jieun\Desktop\STATAforEcon\ch6\BARIUM", clear
+use "C:\Users\aneshthangaraj\Desktop\STATAforEcon\ch6\BARIUM", clear
 list
 sum
 *main var: chnimp (import from China), befile6(6 months before file), affile6(6 months after file), afdec6(6 months after win)
@@ -146,7 +146,7 @@ if both variables have time trend, there's a possibility that the estimation res
 correlation between those two.
 **[Solution] Add one of those time trend variables as explanatory variable. */
 
-use "C:\Users\jieun\Desktop\STATAforEcon\ch6\trend", clear
+use "C:\Users\aneshthangaraj\Desktop\STATAforEcon\ch6\trend", clear
 scatter y1 x1, scheme(sj)
 *Let's assume that r.v. x1 and r.v. y1 are independent. 
 *The scatter graph shows no correlation btw two variables.
@@ -173,6 +173,7 @@ reg y x t
 reg y x t c.t#c.t
 *The result is close to that of y1 and x1 regression analysis.
 *[Conclusion] For time-series analysis, include time trend variable.
+
 
 
 
