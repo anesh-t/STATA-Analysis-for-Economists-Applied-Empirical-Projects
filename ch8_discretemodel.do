@@ -74,7 +74,7 @@ For estimation, we use maximum likelihood estimation.
 *If w*(reserve wage)<= w(wage in labor market): Choose to work
 *age, education, married, child determine wage 
 
-use "C:\Users\jieun\Desktop\STATAforEcon\ch8\women_work", clear
+use "C:\Users\aneshthangaraj\Desktop\STATAforEcon\ch8\women_work", clear
 tab participation
 
 ***(1)Linear Probability Model
@@ -129,7 +129,7 @@ y=max{y*,0}  (If y*=<0, y=0. If y*>0, y=y*)
 u|x ~ N(0,sigma^)
 */
 
-use "C:\Users\jieun\Desktop\STATAforEcon\ch8\auto", clear
+use "C:\Users\aneshthangaraj\Desktop\STATAforEcon\ch8\auto", clear
 gen wgt=weight/1000
 
 reg mpg wgt
@@ -181,7 +181,7 @@ their labor hour is measured as 0.
 */
 
 * Heckman's 2 steps estimation
-use "C:\Users\jieun\Desktop\STATAforEcon\ch8\heckit", clear
+use "C:\Users\aneshthangaraj\Desktop\STATAforEcon\ch8\heckit", clear
 tab participation
 *Result: 67% of female participate in labor market.
 
@@ -222,4 +222,5 @@ twoway (scatter ln_wage age if education == 16, sort ms(Oh)) ///
 (line ln_wage_heckman age  if education == 16, sort lpattern(dash)  lcolor(green)) ///
 (line ln_wage_heckman_mle age  if education == 16, sort lpattern(dash) lwidth(thick) lcolor(yellow)) , ///
 legend(label(1 "Data") label(2 "Normal fit") label(3 "Heckman fit(2-step)") label(4 "Heckman fit(MLE)")  ring(0) pos(5) col(1) size(small) )  xla(,grid)
+
  
