@@ -39,7 +39,7 @@ Identification condition: The number of IV should be equal to or larger than tha
 ::sufficient condition, rank condition.
 */
 
-use "C:\Users\jieun\Desktop\STATAforEcon\ch7\mroz", clear
+use "C:\Users\aneshthangaraj\Desktop\STATAforEcon\ch7\mroz", clear
 
 keep if lfp
 sum wage educ exper
@@ -97,6 +97,7 @@ estimates store iv
 hausman iv ls, constant sigmamore
 *Result: The null hypothesis can be rejected around at 10% significance level.
 
-*Test of over-identifying restriction(°úµµ½Äº°) 
+*Test of over-identifying restriction(Â°ÃºÂµÂµÂ½Ã„ÂºÂ°) 
 estat overid
 *Result: As p>0.05, we cannot reject the null hypothesis. Our IV is not over-identification.
+
