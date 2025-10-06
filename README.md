@@ -1,4 +1,4 @@
-# applied-econometrics-imf-style-analysis
+# Applied-Econometrics-IMF-style-analysis
 
 This repository contains a collection of applied econometric exercises completed using **Stata**.  
 Each project demonstrates how to manage, visualize, and analyze real-world data through modern econometric techniques used in applied economics and public policy research.
