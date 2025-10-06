@@ -1,5 +1,4 @@
 * Chapter 5. OLS model
-* 5 Oct 2020
 
 *********************
 * OLS(Ordinary Least Square) model
@@ -25,7 +24,7 @@ OR to estimate partial effect: Frisch-Waugh-Lovell THM: Pure effect of the varia
 *********************
 *We can expect the positive correlation btw ROE(Return on equity)and CEO's salary
 *The company with High ROE tends to have CEO with High salary 
-use "C:\Users\jieun\Desktop\STATAforEcon\ch5\CEOSAL1", clear
+use "C:\Users\aneshthangaraj\Desktop\STATAforEcon\ch5\CEOSAL1", clear
 list roe salary
 
 *Visual check of roe and salary
@@ -55,7 +54,7 @@ reg lsalary lsales
 * 1.Example of OLS estimation: Multiple Regression Model
 **1-B. Determinants of College GPA 
 *********************
-use "C:\Users\jieun\Desktop\STATAforEcon\ch5\GPA1", clear
+use "C:\Users\aneshthangaraj\Desktop\STATAforEcon\ch5\GPA1", clear
 describe
 
 *Visual check1: relation btw Highschool GPA(hsgpa) and College GPA(colGPA)
@@ -87,7 +86,7 @@ outreg2 using outcome.txt, word
 * 1.Example of OLS estimation: Multiple Regression Model
 **1-C. Estimate return to education 
 *********************
-use "C:\Users\jieun\Desktop\STATAforEcon\ch5\labor_supply_female", clear
+use "C:\Users\aneshthangaraj\Desktop\STATAforEcon\ch5\labor_supply_female", clear
 sum
 
 /*Return to education: Proportion of change in wage per hour with additional 1 year of education 
@@ -136,13 +135,13 @@ tab w2edu
 
 *WAY1. Create new var(educ_year): Year of education
 gen educ_year = .
-replace educ_year=6 if w2edu=="ÃÊµîÇĞ±³"
-replace educ_year=9 if w2edu=="ÁßÇĞ±³"
-replace educ_year=12 if w2edu=="°íµîÇĞ±³"
-replace educ_year=14 if w2edu=="Àü¹®´ëÇĞ±³"
-replace educ_year=16 if w2edu=="´ëÇĞ±³"
-replace educ_year=18 if w2edu=="´ëÇĞ¿ø ¼®»ç"
-replace educ_year=20 if w2edu=="´ëÇĞ¿ø ¹Ú»ç" 
+replace educ_year=6 if w2edu=="ì´ˆë“±í•™êµ"
+replace educ_year=9 if w2edu=="ì¤‘í•™êµ"
+replace educ_year=12 if w2edu=="ê³ ë“±í•™êµ"
+replace educ_year=14 if w2edu=="ì „ë¬¸ëŒ€í•™êµ"
+replace educ_year=16 if w2edu=="ëŒ€í•™êµ"
+replace educ_year=18 if w2edu=="ëŒ€í•™ì› ì„ì‚¬"
+replace educ_year=20 if w2edu=="ëŒ€í•™ì› ë°•ì‚¬" 
 
 *WAY2. 
 tab w2edu, gen(edu)
@@ -198,4 +197,5 @@ foreach st of local levels {
 	gen low=coef-2*stderr
 	gen high=coef+2*stderr
 	two (line coef region if var=="marriage", sort) (rcap high low region if var=="marriage",sort)
+
 	
