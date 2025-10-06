@@ -1,7 +1,7 @@
 ********************************************************************************
 * Load the data
 ********************************************************************************
-use "C:\Users\jieun\Desktop\PublicStata\rscfp2016.dta", clear
+use "C:\Users\aneshthangaraj\Desktop\PublicStata\rscfp2016.dta", clear
 
 ********************************************************************************
 * Keeping variables of interest (and Drop all other variables) 
@@ -96,3 +96,4 @@ glcurve income [aw=wgt],gl(g1) p(p1) nograph lorenz sortvar(income)
 glcurve mincome [aw=wgt],gl(g2) p(p2) nograph lorenz sortvar(mincome)
 twoway (line g1 p1, sort) (line g2 p2, sort) (function y=x ,range(0 1)) , ///
 legend(label(1 "income before taxes and after transfers") label(2 "market income") label(3 "45 degree"))
+
