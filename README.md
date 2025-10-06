@@ -16,26 +16,6 @@ This repository serves as a learning and reference tool for anyone interested in
 - Learning the structure of Stata `.do` files  
 - Building reproducible workflows in economic research  
 
----
-
-## 📂 Repository Structure
-
-stata-analysis-projects/
-│
-├── ch3_data.do # Data import, cleaning, and management
-├── ch4_basiccommand.do # Basic descriptive statistics and commands
-├── ch5_OLSmodel.do # OLS regression models and interpretations
-├── ch6_timeseries.do # Time-series econometric applications
-├── ch7_IV.do # Instrumental variable estimation
-├── ch8_discretemodel.do # Logit/Probit and discrete choice models
-│
-├── Publicecon_empirical_elasticity.do # Public economics elasticity estimation
-├── Publicecon_inequality_lorenz.do # Income inequality and Lorenz curve analysis
-│
-└── README.md # Repository overview and documentation
-
-markdown
-Copy code
 
 ---
 
